@@ -1,0 +1,22 @@
+1. Analizirati magnetno polje Sunca
+
+otvaramo fits fajl i sacuvamo podatke, zatim plotujemo grafik.
+histogram pravimo sa podaci.flatten() - funkcija sve podatke prikazuje u jednoj dimenziji kako bi mogli da prikazemo podatke pomocu histograma.
+
+zatim koristim funkcije iz numpy biblioteke np.mean, np.median, np.var, np.std, i funkcije iz scipy biblioteke stats.skew, stats.kurtosis i racunam statistike  magnetnog polja.
+
+srednja vrednost =  96.68127
+medijana =  45.426666
+varijansa =  42036.73
+standardna devijacija =  205.02861
+iskosenost 5.489817987627117
+zasiljenost =  34.22490693608943
+
+uporedjujemo histogram sa gausijanom:
+za gausijana nam treba srednja vrednost i standardna devijacija, pa plotujemo gausijana pomocu scipy.stats metode norm.pdf(x,mu,sigma)
+(na kraju sam razumela ali sam zaboravila da obrisem..)
+
+izdvajamo 10% piksela sa najvecim apsolutnim vrednostima pomocu metode np.abs(podaci) i np.percentile(x,90) treba nam oni koji su u 10% najvisih, dakle trebaju nam oni koji su u 90%<x. zatim na njih primenimo iste funkcije kao pre i uporedimo rezultate
+
+kreiramo profil  magnetnog polja duz centralnih linija tako sto uzimamo definisemo sta je sredina odnosno centar=dim/2
+napravila sam dve liste podataka gde je onda x ili y fiksno dok se druga vrednost krece duz te ose. nakon toga plotujem grafik za horizontalnu i vertikalnu liniju. prikazala sam i gde se te linije nalaze na nasem grafiku i tacno je u najsvetlijem delu grafika i bila veca vrednost x duz vertikalne(sa desne strane odnosno gore na grafiku) i vec vrednost x duz horizontalne linije(sa leve strane grafika).

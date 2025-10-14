@@ -1,0 +1,14 @@
+1. Kako bi generisali slucajne uzorke iz uniformne raspodele imamo N slucajnih tacaka, u intervalu [a,b]. 
+Podelila sam interval na 5 delova i onda primenjujem Kosijevu raspodelu. 
+μ – interval raspodele
+γ – parametar širine (1/6 intervala)
+f – faktor težine - 0.2 tako da svaka ima istu tezinu- max f= 1 pa ce onda svaki biti 0.2*5 jednak
+
+alternativno mogli smo da koristimo i funkciju uniformne raspodele: F(x)=(x-a)/(b-a), x\in(a,b), sa funkcijom gustine f(x)=1/(b-a).
+
+2. Sleeping Beauty problem
+Treba napomenuti da se za ovaj problem vodi diskusija, odnosno da ima dva misljenja koja je verovatnoca da pogodi koja je strana novcica pala. Neki smatraju da lepotica nema nikakvog znanja o prethodnim budjenjima pa je onda verovatnoca da pogodi 0.5 - jer moze da bude pismo ili glava, dok neki smatraju da je verovatnoca 1/3 jer ima tri dogadjaja: palo pismo, pala glava, palo pismo i probudjena neki drugi dan. No mi sad simuliramo prosiren sleeping beauty problem, pa imamo verovatnocu za ishode bacanja novcica i koristimo bajesovu formulu za izracunavanje verovatnoce.
+
+definisemo promenljive za nas problem, broj uzoraka, lambda i verovatnoce za bacanje novcica.
+definisemo funkciju koja ce nam racunati verovatnocu preko bajesove formule
+ubacujemo vrednosti i racunamo rezultate
